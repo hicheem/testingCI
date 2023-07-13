@@ -23,3 +23,7 @@ jobs:
 
       - name: Run tests
         run: npm test
+
+      - name: Fail if tests fail
+        if: ${{ failure() }}
+        run: exit 1
