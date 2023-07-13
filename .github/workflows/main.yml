@@ -31,3 +31,9 @@ jobs:
             echo "Tests failed"
             exit 1
           fi
+
+      - name: Prevent push if tests failed
+        continue-on-error: false
+        run: |
+          echo "Tests failed, preventing push"
+          exit 1
