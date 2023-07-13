@@ -24,6 +24,28 @@ jobs:
       - name: Run tests
         run: npm test
 
+      - name: Create test result
+        id: test-result
+        uses: actions/github-script@v5
+        with:
+          script: |
+            const { checks } = require('@actions/github');
+            const conclusion = ${{ job.status == 'success' ? 'success' : 'failure' }};
+            const check = await checks.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: 'Test Results',
+              head_sha: context.sha,
+              status: 'completed',
+              conclusion: conclusion,
+              completed_at: new Date().toISOString(),
+              output: {
+                title: 'Test Results',
+                summary: 'Tests have ' + conclusion,
+              },
+            });
+            console.log(`::set-output name=check_id::${check.data.id}`);
+
       - name: Fail if tests fail
-        if: ${{ failure() }}
+        if: steps.test-result.outputs.check_id != ''
         run: exit 1
