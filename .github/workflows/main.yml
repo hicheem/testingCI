@@ -23,3 +23,10 @@ jobs:
 
       - name: Run tests
         run: npm test
+
+      - name: Fail if tests fail
+        run: |
+          if [ ${{ failure() }} ]; then
+            echo "Tests failed. Aborting the workflow."
+            exit 1
+          fi
