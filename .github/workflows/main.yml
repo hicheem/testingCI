@@ -25,16 +25,16 @@ jobs:
         continue-on-error: false
         run: npm test
 
-      - name: Check if tests passed
-        run: |
-          exit_code=$(npm test)
-          if [ $exit_code -ne 0 ]; then
-            echo "Tests failed"
-            exit 1
-          fi
+      # - name: Check if tests passed
+      #   run: |
+      #     exit_code=$(npm test)
+      #     if [ $exit_code -ne 0 ]; then
+      #       echo "Tests failed"
+      #       exit 1
+      #     fi
 
-      - name: Prevent push if tests failed
-        continue-on-error: false
-        run: |
-          echo "Tests failed, preventing push"
-          exit 1
+      # - name: Prevent push if tests failed
+      #   continue-on-error: false
+      #   run: |
+      #     echo "Tests failed, preventing push"
+      #     exit 1
