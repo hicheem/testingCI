@@ -21,13 +21,11 @@ jobs:
           node-version: 14
 
       - name: Install dependencies
-<<<<<<< HEAD
+
         run: |
           cd frontend
           npm ci
-=======
-        run: npm ci
->>>>>>> 8fbdfb14dbb255d01035ec07a1e2d7865545379e
+        # run: npm ci
       
       - name: Checkout Backend Code
         uses: actions/checkout@v2
