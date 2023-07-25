@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          path: frontend
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
@@ -19,7 +21,7 @@ jobs:
           node-version: 14
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
       
       - name: Checkout Backend Code
         uses: actions/checkout@v2
@@ -38,7 +40,7 @@ jobs:
       - name: Start Backend
         run: |
           cd backend
-          npm run dev &
+          npm start &
           sleep 20 # give server some time to start
         env:
           PORT: 3007
