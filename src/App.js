@@ -2,6 +2,12 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  console.log("------------------------------------------------------------")
+  console.log(process.env.REACT_APP_DEVPM, process.env.REACT_APP_ENVIRONMENT)
+  console.log(process.env.REACT_APP_DEVPM, process.env.REACT_APP_ENVIRONMENT)
+  console.log(process.env.REACT_APP_DEVPM, process.env.REACT_APP_ENVIRONMENT)
+  console.log(process.env.REACT_APP_DEVPM, process.env.REACT_APP_ENVIRONMENT)
+  console.log("------------------------------------------------------------")
   return (
     <div className="App">
       <header className="App-header">
@@ -16,7 +22,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn Reac
+          Learn react
           {/* Hello World */}
         </a>
       </header>
