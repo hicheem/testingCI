@@ -34,7 +34,7 @@ jobs:
           repository: hicheem/restaurant-website-backend
           path: backend
           ref: main
-          token: ${{ secrets.BACKEND_PAT }}
+          token: ${{ secrets.BACKEND_PATG }}
 
       - name: Install Backend Dependencies
 
