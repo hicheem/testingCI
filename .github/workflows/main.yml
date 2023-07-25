@@ -24,6 +24,9 @@ jobs:
       - name: Run tests
         continue-on-error: false
         run: npm test
+        env:
+          REACT_APP_ENVIRONMENT: ${{ vars.REACT_APP_ENVIRONMENT }}
+          REACT_APP_DEVPM: ${{ secrets.REACT_APP_DEVPM }}
 
       # - name: Check if tests passed
       #   run: |
