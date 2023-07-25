@@ -3,10 +3,10 @@ import './App.css';
 
 function App() {
   console.log("------------------------------------------------------------")
-  console.log(process.env.REACT_APP_DEVPM, process.env.REACT_APP_ENVIRONMENT)
-  console.log(process.env.REACT_APP_DEVPM, process.env.REACT_APP_ENVIRONMENT)
-  console.log(process.env.REACT_APP_DEVPM, process.env.REACT_APP_ENVIRONMENT)
-  console.log(process.env.REACT_APP_DEVPM, process.env.REACT_APP_ENVIRONMENT)
+  console.log(process.env.REACT_APP_DEVPMJ, process.env.REACT_APP_ENVIRONMENT)
+  console.log(process.env.REACT_APP_DEVPMJ, process.env.REACT_APP_ENVIRONMENT)
+  console.log(process.env.REACT_APP_DEVPMJ, process.env.REACT_APP_ENVIRONMENT)
+  console.log(process.env.REACT_APP_DEVPMJ, process.env.REACT_APP_ENVIRONMENT)
   console.log("------------------------------------------------------------")
   return (
     <div className="App">
