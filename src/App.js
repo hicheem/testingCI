@@ -20,7 +20,7 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn react
-          Hello World
+          {/* Hello World */}
         </a>
       </header>
     </div>
